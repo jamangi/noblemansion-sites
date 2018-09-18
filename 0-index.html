@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/mansion.png">
+    <title>Noble Mansion RP</title>
+    <style type="text/css">
+        * {padding: 0; margin:0;}
+        html {height: 100%;}
+        body {height: 100%; background: gold;}
+        header{height: 10%; background: #260F26;}
+        main{height: 80%; background: green;}
+        footer{height: 10%; background: #260F26;}
+        article {height: 100%; background: #86CB92; width: 60%; float:left;}
+        aside {height: 100%; background: #71B48D;   width: 40%; float: right;}
+        article {overflow-y: scroll;}
+        article section {margin-bottom: 5%; padding-left: 2%;}
+        article section h1 {margin-bottom: 3%;}
+        article section p {padding-left: 3%;}
+
+        #logo, #space, #topic1,
+        #topic2, #topic3 {height: 100%; width: 20%; float: left;}
+        #logo img {max-height: 100%; max-width: 100%;}
+        #topic1, #topic2, #topic3, footer 
+        {
+            color: lightgray;
+            box-sizing: border-box;
+            padding-top: 2%;
+        }
+        footer {text-align: center; padding-top:2%;}
+
+        img {border-radius: 1%;}
+        aside {text-align: center;}
+        .helper {
+        display: inline-block;
+        width: 0%;
+        height: 100%;
+        vertical-align: middle;
+        }
+        aside img { 
+        max-width: 95%; max-height: 99%; opacity: 0;
+        transition: opacity 500ms; vertical-align: middle;
+        }
+        main:hover aside img {opacity: 1;}
+    </style>
+</head>
+<body>
+<header>
+    <div id="logo">
+        <img src="images/mansion.png" />
+    </div>
+    <div id="space"></div>
+    <div id="topic1">Topic 1</div>
+    <div id="topic2">Topic 2</div>
+    <div id="topic3">Topic 3</div>
+</header>
+<main>
+    <article>
+        <section data-img="images/gala.jpg">
+            <h1>Topic placeholder for positioning</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem iste, inquam, de voluptate quid sentit? Sic consequentibus vestris sublatis prima tolluntur. Duo Reges: constructio interrete. Quis Aristidem non mortuum diligit? Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Quippe: habes enim a rhetoribus; Huius ego nunc auctoritatem sequens idem faciam. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus.
+            </p>
+        </section>
+        <section data-img="images/queen.png">
+            <h1>Topic placeholder for positioning</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem iste, inquam, de voluptate quid sentit? Sic consequentibus vestris sublatis prima tolluntur. Duo Reges: constructio interrete. Quis Aristidem non mortuum diligit? Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Quippe: habes enim a rhetoribus; Huius ego nunc auctoritatem sequens idem faciam. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus.
+            </p>
+        </section>
+        <section data-img="images/lumi.jpg">
+            <h1>Topic placeholder for positioning</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem iste, inquam, de voluptate quid sentit? Sic consequentibus vestris sublatis prima tolluntur. Duo Reges: constructio interrete. Quis Aristidem non mortuum diligit? Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Quippe: habes enim a rhetoribus; Huius ego nunc auctoritatem sequens idem faciam. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus.
+            </p>
+        </section>
+        <section data-img="images/roman.JPG">
+            <h1>Topic placeholder for positioning</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem iste, inquam, de voluptate quid sentit? Sic consequentibus vestris sublatis prima tolluntur. Duo Reges: constructio interrete. Quis Aristidem non mortuum diligit? Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Quippe: habes enim a rhetoribus; Huius ego nunc auctoritatem sequens idem faciam. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus.
+            </p>
+        </section>
+    </article>
+    <aside>
+        <span class="helper"></span>
+<img src="" id="sideImg">
+    </aside>
+</main>
+<footer>Made by Ruby for Noble Mansion</footer>
+
+<script type="text/javascript">
+    let sideImg = document.getElementById("sideImg")
+    let allSections = document.getElementsByTagName("section")
+
+    for (let section of allSections) {
+        section.addEventListener("mouseenter", changeImg)
+    }
+
+    function changeImg() {
+        let imgLink = this.getAttribute("data-img")
+        sideImg.setAttribute("src", imgLink)
+    }
+</script>
+
+</body>
+</html>
